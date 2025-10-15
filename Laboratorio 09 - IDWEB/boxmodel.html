@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>boxmodel - Tarjetas con Flex</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ESTILOS PARA BOXMODEL */
+    .cards-container{display:flex;justify-content:space-around;gap:16px;flex-wrap:wrap;}
+    .card-item{flex:0 1 250px;border:3px solid #cfe2f3;padding:20px;margin:12px;border-radius:10px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.04);}
+    .card-item h3{margin:0 0 8px 0;font-size:18px;}
+    .card-item p{margin:0;}
+    .card-item .box-info{margin-top:12px;padding:8px;border:1px dashed #bcd; background:#fbfdff;}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="site-header">
+      <h1>boxmodel - Tarjetas con Flex</h1>
+      <p class="small">Objetivo: usar margin, padding, border y flexbox</p>
+    </header>
+
+    <section class="cards-container" aria-label="tarjetas">
+      <article class="card-item">
+        <h3>Tarjeta 1</h3>
+        <p>Contenido ejemplo. Esta tarjeta tiene border, padding y margin en su caja.</p>
+        <div class="box-info">padding:16px; border:3px; margin:12px;</div>
+      </article>
+
+      <article class="card-item">
+        <h3>Tarjeta 2</h3>
+        <p>Otra tarjeta para demostrar espacio entre tarjetas con justify-content: space-around</p>
+        <div class="box-info">box-sizing: border-box aplicado globalmente</div>
+      </article>
+
+      <article class="card-item">
+        <h3>Tarjeta 3</h3>
+        <p>Flex wrap permite ajustar las tarjetas en panttallas pequeñas.</p>
+        <div class="box-info">border-radius aplicado para estilo</div>
+      </article>
+    </section>
+
+    <footer class="site-footer">
+      <p class="small">Alumna: Brigitte Karolay</p>
+    </footer>
+  </main>
+</body>
+</html>
