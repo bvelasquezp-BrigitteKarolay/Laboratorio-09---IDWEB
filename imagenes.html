@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IMAGENES - GALERIA RESPONSIVE</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .img-card {
+      border: 2px solid #ffd5e0;
+      padding: 10px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .img-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(231,84,128,0.25);
+    }
+    .img-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .img-caption {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #6c6c6c;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="site-header">
+      <h1>GALERIA DE IMAGENNES - RESPONSIVE</h1>
+      <p class="small">Se usa grid-template-columns con minmax para adaptar el ancho</p>
+    </header>
+
+    <section class="gallery">
+
+      <figure class="img-card">
+        <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Laboratorio-09---IDWEB/main/IMAGENES/IMAGEN%201.png" alt="imagen1">
+        <figcaption class="img-caption">Imagen 1 - ejemplo</figcaption>
+      </figure>
+
+      <figure class="img-card">
+        <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Laboratorio-09---IDWEB/main/IMAGENES/IMAGEN%202.png" alt="imagen2">
+        <figcaption class="img-caption">Imagen 2 - ejemplo</figcaption>
+      </figure>
+
+      <figure class="img-card">
+        <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Laboratorio-09---IDWEB/main/IMAGENES/IMAGEN%203.png" alt="imagen3">
+        <figcaption class="img-caption">Imagen 3 - ejemplo</figcaption>
+      </figure>
+
+      <figure class="img-card">
+        <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Laboratorio-09---IDWEB/main/IMAGENES/IMAGEN%204.png" alt="imagen4">
+        <figcaption class="img-caption">Imagen 4 - ejemplo</figcaption>
+      </figure>
+
+    </section>
+
+    <footer class="site-footer">
+      <p class="small">Recuerda usar box-sizing: border-box para mantener el orden del layout</p>
+    </footer>
+  </main>
+</body>
+</html>

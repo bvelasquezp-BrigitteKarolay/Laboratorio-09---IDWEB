@@ -1,0 +1,129 @@
+/* VARIABLES GLOBALES */
+:root {
+  --MAX-WIDTH: 1100px;
+  --GAP: 20px;
+  --COLOR-PRIMARIO: #e75480;   
+  --COLOR-SECUNDARIO: #6c6c6c;
+  --COLOR-FONDO: #fff7fa;       
+  --COLOR-BLANCO: #ffffff;
+  --COLOR-BORDE: #ffd5e0;
+  --COLOR-TEXTO: #2b2b2b;
+  --SOMBRA-SUAVE: 0 3px 8px rgba(0, 0, 0, 0.05);
+  --SOMBRA-HOVER: 0 6px 14px rgba(231, 84, 128, 0.25);
+  --RADIO: 12px;
+}
+
+/* AJUSTES GENERALES */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: var(--COLOR-FONDO);
+  color: var(--COLOR-TEXTO);
+  line-height: 1.6;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: var(--MAX-WIDTH);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ENCABEZADO */
+.site-header {
+  background: linear-gradient(135deg, #ffd8e6 0%, #ffffff 100%);
+  border-radius: var(--RADIO);
+  padding: 40px 30px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: var(--SOMBRA-SUAVE);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.site-header:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--SOMBRA-HOVER);
+}
+
+.site-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  color: var(--COLOR-PRIMARIO);
+  letter-spacing: 1px;
+}
+
+.site-header p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--COLOR-SECUNDARIO);
+}
+
+/* MENU PRINCIPAL */
+.nav-list {
+  margin: 40px auto;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.nav-item {
+  background: var(--COLOR-BLANCO);
+  border: 1px solid var(--COLOR-BORDE);
+  border-radius: var(--RADIO);
+  box-shadow: var(--SOMBRA-SUAVE);
+  padding: 18px 22px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--SOMBRA-HOVER);
+  border-color: var(--COLOR-PRIMARIO);
+}
+
+.nav-item a {
+  color: var(--COLOR-PRIMARIO);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.nav-item p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--COLOR-SECUNDARIO);
+}
+
+/* PIE DE PAGINA */
+.site-footer {
+  max-width: var(--MAX-WIDTH);
+  margin: 50px auto 30px auto;
+  padding: 14px;
+  color: var(--COLOR-SECUNDARIO);
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid var(--COLOR-BORDE);
+}
+
+/* RESPONSIVO */
+@media (max-width: 700px) {
+  .site-header {
+    padding: 30px 20px;
+  }
+
+  .site-header h1 {
+    font-size: 26px;
+  }
+
+  .nav-item a {
+    font-size: 16px;
+  }
+}

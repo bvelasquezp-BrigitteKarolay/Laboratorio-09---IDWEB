@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>dashboard - Sidebar y tarjetas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .dashboard-grid{display:grid;grid-template-columns:250px 1fr;gap:16px;min-height:70vh;}
+    .sidebar{background:#fff;border:2px solid #e6eef8;padding:16px;border-radius:8px;}
+    .content{background:#fff;border:2px solid #e6eef8;padding:16px;border-radius:8px;}
+    .stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;}
+    .stat-card{flex:1 1 150px;padding:12px;border:2px solid #f1f6fb;border-radius:8px;background:#fafcff;text-align:center;}
+  </style>
+</head>
+<body>
+  <div class="container dashboard-grid">
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <ul>
+        <li>Panel</li>
+        <li>Usuarios</li>
+        <li>Configuracion</li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <h2>Dashboard</h2>
+      <p class="small">Dentro del contenido se usan tarjetas (modelos de cajas) para mostrar estadisticas</p>
+
+      <div class="stats">
+        <div class="stat-card">
+          <h3>120</h3>
+          <p class="small">Visitas hoy</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>45</h3>
+          <p class="small">Usuarios nuevos</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>7</h3>
+          <p class="small">Tareas pendientes</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

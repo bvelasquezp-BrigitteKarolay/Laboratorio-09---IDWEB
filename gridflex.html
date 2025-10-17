@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>gridflex</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ESTILOS PARA GRID LAYOUT*/
+    .grid-layout{
+      display:grid;
+      grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+      grid-template-columns: 2fr 1fr;
+      gap:16px;
+      align-items:start;
+    }
+    header.site-header{grid-area:header;}
+    nav.blog-nav{grid-area:nav;}
+    main.blog-main{grid-area:main;}
+    aside.blog-aside{grid-area:aside;}
+    footer.site-footer{grid-area:footer;}
+
+    .blog-main .articles{display:flex;gap:16px;flex-wrap:wrap;}
+    .article-card{flex:1 1 300px;border:2px solid #e8eef6;padding:14px;border-radius:8px;background:#fff;}
+  </style>
+</head>
+<body>
+  <div class="container grid-layout">
+    <header class="site-header">
+      <h1>Layout de Blog - Grid + Flex</h1>
+      <p class="small">Grid para layout general, Flex para los articulos dentro de main</p>
+    </header>
+
+    <nav class="blog-nav card">
+      <h4>Menu</h4>
+      <ul>
+        <li>Inicio</li>
+        <li>Categoria 1</li>
+        <li>Categoria 2</li>
+      </ul>
+    </nav>
+
+    <main class="blog-main card">
+      <h2>Articulos</h2>
+      <section class="articles">
+        <article class="article-card">
+          <h3>Titulo articulo A</h3>
+          <p>Resumen: Cada articulo usa padding y border para mostrar el modelo de cajas.</p>
+        </article>
+
+        <article class="article-card">
+          <h3>Titulo articulo B</h3>
+          <p>Resumen: Las tarjetas tienen el mismo ancho gracias a flex.</p>
+        </article>
+      </section>
+    </main>
+
+    <aside class="blog-aside card">
+      <h3>Aside</h3>
+      <p class="small">Informacion adicional, widgets, enlaces.</p>
+    </aside>
+
+    <footer class="site-footer card">
+      <p class="small">Alumna: Brigitte Karolay</p>
+    </footer>
+  </div>
+</body>
+</html>

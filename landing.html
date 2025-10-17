@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>landing - Hero centrado</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .landing-grid{display:grid;grid-template-rows:auto 1fr auto;min-height:80vh;gap:16px;}
+    .hero{display:flex;align-items:center;justify-content:center;flex-direction:column;padding:48px;border-radius:12px;background:linear-gradient(180deg,#e9f4ff, #ffffff);border:2px solid #d9e9fb;}
+    .hero h1{margin:0 0 12px 0;font-size:32px;}
+    .hero .btn{padding:12px 20px;border-radius:8px;border:0;background:var(--accent);color:#fff;font-weight:bold;cursor:pointer;}
+    .section{padding:20px;background:#fff;border:2px solid #eef4fb;border-radius:8px;}
+  </style>
+</head>
+<body>
+  <main class="container landing-grid">
+    <header class="site-header">
+      <h1>Landing Page - Hero centrado</h1>
+    </header>
+
+    <section class="hero">
+      <h1>Producto o servicio</h1>
+      <p class="small">Hero centrado con flexbox</p>
+      <button class="btn">Accion principal</button>
+    </section>
+
+    <section class="section">
+      <h3>Caracteristicas</h3>
+      <p class="small">Cada seccion demuestra uso de padding y border-radius en el modelo de cajas.</p>
+    </section>
+
+    <footer class="site-footer">
+      <p class="small">Alumna: Brigitte Karolay</p>
+    </footer>
+  </main>
+</body>
+</html>
